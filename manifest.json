@@ -2,7 +2,7 @@
   "background": { "scripts": ["background.js"] },
   "name" : "WebExtractor (Use readability)",
   "version" : "0.1",
-  "description" : "test",
+  "description" : "Waveface meeting demo",
   "permissions": [
     "tabs",
     "background", 
