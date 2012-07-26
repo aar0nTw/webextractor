@@ -23,7 +23,7 @@
 		});
 
 		function extractor(tablink){
-			$.get('http://localhost/extractor/Readability.php',{url:tablink},function(data){
+			$.get('http://50.112.119.183/extractor/Readability.php',{url:tablink},function(data){
 				$('body').html(data);
 			});
 		}
