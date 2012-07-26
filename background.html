@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Background</title>
+	<style>
+      body {
+        min-width:600px;
+        overflow-x:hidden;
+      }
+
+      img {
+        margin:5px;
+        border:2px solid black;
+        vertical-align:middle;
+        width:75px;
+        height:75px;
+      }
+    </style>
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		chrome.tabs.getSelected(null,function(tab) {
+		    extractor(tab.url);
+		});
+
+		function extractor(tablink){
+			$.get('http://localhost/extractor/Readability.php',{url:tablink},function(data){
+				$('body').html(data);
+			});
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
